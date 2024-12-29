@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +7,7 @@ body {
     justify-content: flex-start;
     overflow-x: auto;
     padding: 20px;
+    color: #333; /* Fuente negra o gris oscura */
 }
 
 #mapa-container {
@@ -17,7 +19,7 @@ body {
 }
 
 #mapa-index {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Gris o plata */
     border-right: 1px solid #ddd;
     padding: 20px;
     margin-right: 20px;
@@ -42,11 +44,11 @@ body {
 }
 
 #mapa-index a:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Gris o plata */
 }
 
 #mapa-index a.active {
-    background-color: #e695d8;
+    background-color: #e695d8; /* Rosa predominante */
     color: white;
 }
 
@@ -64,7 +66,7 @@ body {
 
 .nodo-principal {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Gris o plata */
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
@@ -76,11 +78,11 @@ body {
     position: relative;
     z-index: 1;
     transform: translateY(0);
-    color: #030000;
+    color: #030000; /* Fuente negra o gris oscura */
 }
 
 .nodo-principal.active {
-    background-color: #e695d8;
+    background-color: #e695d8; /* Rosa predominante */
     color: white;
 }
 
@@ -94,7 +96,7 @@ body {
 
 .opcion {
     display: block;
-    background-color: #e695d8;
+    background-color: #e695d8; /* Rosa predominante */
     color: #fff;
     padding: 10px 15px;
     margin: 5px;
@@ -108,13 +110,14 @@ body {
 .opcion:hover {
     background-color: #c664b7;
 }
+
 .detalle-container {
     background-color: #f0f0f0;
-     border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Gris o plata */
     padding: 20px;
     border-radius: 8px;
     display: none;
-     min-width: 250px;
+    min-width: 250px;
     max-width: 500px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -124,65 +127,70 @@ body {
     white-space: normal;
     transform: translateY(0);
 }
- .detalle-container p {
+
+.detalle-container p {
     margin-top: 0;
 }
 
- .detalle-container button {
-     background-color: #464849;
+.detalle-container button {
+    background-color: #464849; /* Negro o gris oscuro */
     border: none;
     color: white;
     padding: 10px 20px;
-      text-align: center;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-     cursor: pointer;
-      border-radius: 8px;
-      margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
 }
+
 .flecha {
     position: absolute;
-     width: 0;
+    width: 0;
     height: 0;
     border-top: 10px solid transparent;
-   border-bottom: 10px solid transparent;
-   border-left: 20px solid #464849;
-      margin: 90px 10px 0 -10px;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #464849;
+    margin: 90px 10px 0 -10px;
 }
- .nodo-principal:nth-child(2) .flecha {
+
+.nodo-principal:nth-child(2) .flecha {
     margin-left: -20px;
 }
 .nodo-principal:nth-child(3) .flecha {
     margin-left: -20px;
 }
+
 .nodo-principal:nth-child(4) .flecha {
+  margin-left: -20px;
+}
+.nodo-principal:nth-child(5) .flecha {
     margin-left: -20px;
-}
-  .nodo-principal:nth-child(5) .flecha {
-     margin-left: -20px;
-}
-  .nodo-principal:nth-child(6) .flecha {
-   margin-left: -20px;
-}
+  }
+
+.nodo-principal:nth-child(6) .flecha {
+    margin-left: -20px;
+  }
  .nodo-principal:nth-child(7) .flecha {
-    margin-left: -20px;
-}
+  margin-left: -20px;
+  }
  .nodo-principal:nth-child(8) .flecha {
+  margin-left: -20px;
+  }
+.nodo-principal:nth-child(9) .flecha {
     margin-left: -20px;
 }
-    .nodo-principal:nth-child(9) .flecha {
-     margin-left: -20px;
-}
-     .nodo-principal:nth-child(10) .flecha {
-       margin-left: -20px;
-}
-  .nodo-principal:nth-child(11) .flecha {
+.nodo-principal:nth-child(10) .flecha {
     margin-left: -20px;
 }
-  .nodo-principal:nth-child(12) .flecha{
-       margin-left: -20px;
+.nodo-principal:nth-child(11) .flecha {
+    margin-left: -20px;
 }
-    .nodo-principal:nth-child(13) .flecha{
-      margin-left: -20px;
+.nodo-principal:nth-child(12) .flecha{
+  margin-left: -20px;
 }
+ .nodo-principal:nth-child(13) .flecha{
+   margin-left: -20px;
+ }

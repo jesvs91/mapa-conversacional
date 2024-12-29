@@ -1,4 +1,4 @@
- body {
+body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -14,6 +14,7 @@
     align-items: flex-start;
     width: auto;
     position: relative;
+    min-height:100vh;
 }
 
 #mapa-index {
@@ -26,12 +27,11 @@
     position: sticky;
     top: 0;
     left: 0;
-    height: 100vh;
+      height: 100vh;
     overflow-y: auto;
-    z-index: 1;
+     z-index: 1;
 }
-
-#mapa-index a {
+ #mapa-index a {
     display: block;
     padding: 10px 15px;
     margin: 5px 0;
@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 
-#mapa-index a:hover {
+ #mapa-index a:hover {
     background-color: #ddd;
 }
 
@@ -49,145 +49,132 @@
     background-color: #e695d8;
     color: white;
 }
-
 #mapa-flujo {
     display: flex;
-    flex-direction: row;
+     flex-direction: row;
     align-items: flex-start;
-    flex: 1;
-    padding-left: 20px;
-    position: relative;
-    white-space: nowrap;
-    z-index: 0;
-    justify-content: flex-start;
+     flex: 1;
+     padding-left: 20px;
+      position:relative;
+     white-space: nowrap;
+        z-index: 0;
+        justify-content: flex-start;
 }
 
-.nodo-principal {
+ .nodo-principal {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
-    border-radius: 8px;
+   border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     min-width: 250px;
     text-align: center;
     display: inline-block;
-    vertical-align: top;
-    position: relative;
-    z-index: 1;
-    transform: translateY(0);
-    color:#030000;
+     vertical-align: top;
+      position:relative;
+     z-index: 1;
+      transform: translateY(0);
+      color:#030000;
 }
-
-.nodo-principal.active {
+.nodo-principal.active{
     background-color: #e695d8;
-    color: white;
+    color:white;
 }
-
 .nodo-principal h2 {
-    margin-top: 0;
+     margin-top: 0;
 }
-
 .opciones-container {
     margin-top: 10px;
 }
-
 .opcion {
     display: block;
-    background-color: #e695d8;
-    color: #fff;
+   background-color: #e695d8;
+   color: #fff;
     padding: 10px 15px;
     margin: 5px;
     text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
+   text-decoration: none;
+   border-radius: 5px;
     cursor: pointer;
     display: inline-block;
 }
-
-.opcion:hover {
+.opcion:hover{
     background-color: #c664b7;
 }
-
 .detalle-container {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+      background-color: #f0f0f0;
+     border: 1px solid #ddd;
     padding: 20px;
-    border-radius: 8px;
-    display: none;
+     border-radius: 8px;
+      display: none;
     min-width: 250px;
     max-width: 500px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 100%;
+      top: 100%;
     left: 0;
-    z-index: 2;
-    white-space: normal;
+     z-index: 2;
+     white-space: normal;
 }
-
-.detalle-container p {
+ .detalle-container p {
     margin-top: 0;
 }
-
-.detalle-container button {
+ .detalle-container button {
     background-color: #464849;
     border: none;
-    color: white;
+     color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 10px;
 }
-
-    .flecha {
+.flecha {
     position: absolute;
-        width: 0;
-     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+   border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
     border-left: 20px solid #464849;
-      margin: 90px 10px 0 -10px;
+  margin: 90px 10px 0 -10px;
 }
- .nodo-principal:nth-child(2) .flecha {
+ .nodo-principal:nth-child(2) .flecha{
      margin-left: -20px;
 }
-
-.nodo-principal:nth-child(3) .flecha {
-    margin-left: -20px;
-}
-
-.nodo-principal:nth-child(4) .flecha {
+ .nodo-principal:nth-child(3) .flecha{
      margin-left: -20px;
 }
-
-.nodo-principal:nth-child(5) .flecha {
+.nodo-principal:nth-child(4) .flecha{
       margin-left: -20px;
 }
- .nodo-principal:nth-child(6) .flecha {
+ .nodo-principal:nth-child(5) .flecha{
+     margin-left: -20px;
+}
+.nodo-principal:nth-child(6) .flecha{
     margin-left: -20px;
 }
- .nodo-principal:nth-child(7) .flecha {
+  .nodo-principal:nth-child(7) .flecha{
     margin-left: -20px;
 }
 .nodo-principal:nth-child(8) .flecha{
      margin-left: -20px;
 }
- .nodo-principal:nth-child(9) .flecha{
+  .nodo-principal:nth-child(9) .flecha{
+       margin-left: -20px;
+}
+    .nodo-principal:nth-child(10) .flecha{
+     margin-left: -20px;
+}
+     .nodo-principal:nth-child(11) .flecha{
+    margin-left: -20px;
+}
+   .nodo-principal:nth-child(12) .flecha{
+    margin-left: -20px;
+}
+     .nodo-principal:nth-child(13) .flecha{
       margin-left: -20px;
-}
-  .nodo-principal:nth-child(10) .flecha{
-    margin-left: -20px;
-}
-   .nodo-principal:nth-child(11) .flecha{
-    margin-left: -20px;
-}
-  .nodo-principal:nth-child(12) .flecha{
-    margin-left: -20px;
-}
-    .nodo-principal:nth-child(13) .flecha{
-    margin-left: -20px;
 }

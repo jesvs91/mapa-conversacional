@@ -4,47 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Conceptual Crediclub Activa</title>
-    <style>
+     <style>
         body {
             font-family: sans-serif;
             background-color: #f4f4f4;
             margin: 0;
+             overflow-x: scroll;
             padding: 20px;
         }
         #mapa-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row; /* Presentación horizontal */
+            align-items: flex-start; /* Alineación superior */
         }
-        .nodo-principal {
+
+         .nodo-principal {
             background-color: #fff;
             border: 1px solid #ddd;
             padding: 20px;
             margin: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+           min-width:250px;
             text-align: center;
         }
-         .nodo-principal:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          .nodo-principal.active{
+           background-color: #e0e0e0;
         }
         .nodo-principal h2 {
             margin-top: 0;
         }
-        .detalle-container {
-            width: 80%;
-             display:none;
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .opciones-container {
+            margin-top: 10px;
         }
-         .detalle-container p{
+        .opcion {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 5px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+       .opcion:hover{
+           background-color: #2980b9;
+       }
+        .detalle-container {
+          background-color: #f0f0f0;
+          border: 1px solid #ddd;
+          margin: 20px;
+           padding: 20px;
+          border-radius: 8px;
+           display:none;
+           min-width:250px;
+         max-width: 500px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+           .detalle-container p{
            margin-top:0;
         }
          .detalle-container button{
@@ -57,63 +76,64 @@
             display: inline-block;
             font-size: 16px;
              cursor: pointer;
-              border-radius: 8px;
+             border-radius: 8px;
                margin-top: 10px;
           }
         .flecha {
-            position: relative;
+           position: relative;
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-top: 20px solid #3498db;
-             margin: 5px auto;
+            margin: 100px 20px 0 20px;
         }
+
     </style>
 </head>
 <body>
     <div id="mapa-container">
-        <div class="nodo-principal" data-target="venta-inicial-detalle">
-            <h2>Script de Venta Inicial</h2>
+         <div class="nodo-principal" data-target="inicio-detalle" id="inicio">
+             <h2>Presentación Inicial</h2>
+             <div class="opciones-container">
+                 <a href="#continua1" class="opcion">SÍ, CONTINUAR</a>
+                 <a href="#no_conoce" class="opcion">NO, preguntar si conoce a la persona</a>
+             </div>
+              <div id="inicio-detalle" class="detalle-container">
+                 <p>¡Buen día!, mi nombre es [EJECUTIVO], Ejecutivo de Crediclub Activa ¿tengo el gusto con [PROSPECTO]?</p>
+                  <button onclick="regresar()">Regresar</button>
+            </div>
         </div>
         <div class="flecha"></div>
-        <div class="nodo-principal" data-target="tramite-existente-detalle">
-            <h2>Proceso Trámite Existente / Otros Trámites</h2>
-        </div>
-         <div class="flecha"></div>
-        <div class="nodo-principal" data-target="recuperacion-detalle">
-            <h2>Recuperación de Prospectos</h2>
-        </div>
-        <div class="flecha"></div>
-        <div class="nodo-principal" data-target="scripts-venta-detalle">
-            <h2>Scripts de Venta Complementarios</h2>
-        </div>
-          <div class="flecha"></div>
-        <div class="nodo-principal" data-target="informacion-adicional-detalle">
-            <h2>Información Adicional</h2>
+           <div class="nodo-principal" data-target="continua1-detalle" id="continua1">
+                <h2>Motivo de Llamada</h2>
+                <div class="opciones-container">
+                 <a href="#continua2" class="opcion">Sí, continuar</a>
+                 <a href="#no_disponible" class="opcion">Sí, pero no le puedo atender ahora</a>
+                 <a href="#no_interesa" class="opcion">Sí, pero ya no me interesa</a>
+                 <a href="#interes_personal" class="opcion">Sí, pero estoy interesada en un crédito Personal</a>
+                </div>
+                <div id="continua1-detalle" class="detalle-container">
+                    <p>Mi llamada es referente a la información que solicitó de nuestros Créditos Grupales, ¿es correcto?</p>
+                     <button onclick="regresar()">Regresar</button>
+                </div>
+            </div>
+             <div class="flecha"></div>
+           <div class="nodo-principal" data-target="continua2-detalle" id="continua2">
+            <h2>Validación de Cobertura</h2>
+             <div class="opciones-container">
+                 <a href="#oferta_inicial" class="opcion">Sí, tiene Cobertura y está muy alejado de la limítrofe</a>
+                 <a href="#fuera_limite" class="opcion">Sí, tiene Cobertura y está cerca de la limítrofe</a>
+                <a href="#fuera_zona" class="opcion">Fuera de Zona</a>
+                </div>
+             <div id="continua2-detalle" class="detalle-container">
+                    <p>...de acuerdo, con el fin de ubicar su zona y revisar la cobertura del servicio le pido que me confirme su Código Postal [XXXXX] y colonia.</p>
+                     <button onclick="regresar()">Regresar</button>
+                </div>
         </div>
 
-        <div id="venta-inicial-detalle" class="detalle-container">
-            <p>Detalles del Script de Venta Inicial: presentación, validación de cobertura, etc.</p>
-           <button onclick="regresar()">Regresar</button>
-        </div>
-         <div id="tramite-existente-detalle" class="detalle-container">
-            <p>Detalles del proceso de trámite existente</p>
-             <button onclick="regresar()">Regresar</button>
-        </div>
-         <div id="recuperacion-detalle" class="detalle-container">
-            <p>Detalles de la recuperación de prospectos</p>
-              <button onclick="regresar()">Regresar</button>
-        </div>
-          <div id="scripts-venta-detalle" class="detalle-container">
-            <p>Detalles de los Scripts de venta complementarios</p>
-              <button onclick="regresar()">Regresar</button>
-        </div>
-         <div id="informacion-adicional-detalle" class="detalle-container">
-            <p>Detalles sobre los precios, campañas, recomendaciones, objeciones, etc</p>
-              <button onclick="regresar()">Regresar</button>
-        </div>
+       <!-- Resto del flujo (se agregará en próximas partes) -->
     </div>
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

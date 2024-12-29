@@ -5,19 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Conceptual Crediclub Activa</title>
     <style>
-        body {
+         body {
             font-family: sans-serif;
             background-color: #f4f4f4;
             margin: 0;
              overflow-x: scroll;
             padding: 20px;
+             display: flex;
         }
         #mapa-container {
+             display: flex;
+             flex-direction: row;
+            align-items: flex-start;
+             width: 100%;
+        }
+          #mapa-index {
+            background-color: #e0e0e0;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            margin-right: 20px;
+            width: 200px;
+              text-align: left;
+        }
+        #mapa-index a {
+            display: block;
+           padding: 10px 15px;
+            margin: 5px 0;
+            text-decoration: none;
+            border-radius: 5px;
+              color: #3498db;
+             cursor: pointer;
+        }
+         #mapa-index a:hover{
+            background-color: #ddd;
+        }
+        #mapa-index a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+         #mapa-flujo {
             display: flex;
             flex-direction: row; /* Presentación horizontal */
             align-items: flex-start; /* Alineación superior */
-        }
 
+        }
          .nodo-principal {
             background-color: #fff;
             border: 1px solid #ddd;
@@ -25,7 +57,7 @@
             margin: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-           min-width:250px;
+            min-width:250px;
             text-align: center;
         }
           .nodo-principal.active{
@@ -93,6 +125,25 @@
 </head>
 <body>
     <div id="mapa-container">
+        <div id="mapa-index">
+           <a href="#inicio" class="active">Presentación Inicial</a>
+             <a href="#continua1">Motivo de Llamada</a>
+             <a href="#continua2">Validación de Cobertura</a>
+              <a href="#oferta_inicial">Oferta Inicial de Producto</a>
+             <a href="#sondeo_conocimiento">Sondeo y Conocimiento del Grupo</a>
+              <a href="#oferta_personalizada">Oferta Personalizada</a>
+               <a href="#requisitos">Requisitos</a>
+              <a href="#conformacion_grupal">Conformación Grupal</a>
+             <a href="#datos_iniciales">Datos Iniciales para Trámite</a>
+               <a href="#no_primera_vez">Proceso Trámite existente</a>
+            <a href="#preanalisis">Introducción a MA integral</a>
+            <a href="#datos_finales">Solicitud de datos iniciales</a>
+             <a href="#programacion_visita">Programación de una visita</a>
+              <a href="#recapitulacion">Recapitulación de Datos Recopilados</a>
+              <a href="#cierre_llamada">Cierre de Llamada</a>
+
+         </div>
+         <div id="mapa-flujo">
          <div class="nodo-principal" data-target="inicio-detalle" id="inicio">
              <h2>Presentación Inicial</h2>
              <div class="opciones-container">

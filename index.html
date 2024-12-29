@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual Crediclub Activa</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        #mapa-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nodo-principal {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+         .nodo-principal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .nodo-principal h2 {
+            margin-top: 0;
+        }
+        .detalle-container {
+            width: 80%;
+             display:none;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+         .detalle-container p{
+           margin-top:0;
+        }
+         .detalle-container button{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+             cursor: pointer;
+              border-radius: 8px;
+               margin-top: 10px;
+          }
+        .flecha {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #3498db;
+             margin: 5px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="mapa-container">
+        <div class="nodo-principal" data-target="venta-inicial-detalle">
+            <h2>Script de Venta Inicial</h2>
+        </div>
+        <div class="flecha"></div>
+        <div class="nodo-principal" data-target="tramite-existente-detalle">
+            <h2>Proceso Trámite Existente / Otros Trámites</h2>
+        </div>
+         <div class="flecha"></div>
+        <div class="nodo-principal" data-target="recuperacion-detalle">
+            <h2>Recuperación de Prospectos</h2>
+        </div>
+        <div class="flecha"></div>
+        <div class="nodo-principal" data-target="scripts-venta-detalle">
+            <h2>Scripts de Venta Complementarios</h2>
+        </div>
+          <div class="flecha"></div>
+        <div class="nodo-principal" data-target="informacion-adicional-detalle">
+            <h2>Información Adicional</h2>
+        </div>
+
+        <div id="venta-inicial-detalle" class="detalle-container">
+            <p>Detalles del Script de Venta Inicial: presentación, validación de cobertura, etc.</p>
+           <button onclick="regresar()">Regresar</button>
+        </div>
+         <div id="tramite-existente-detalle" class="detalle-container">
+            <p>Detalles del proceso de trámite existente</p>
+             <button onclick="regresar()">Regresar</button>
+        </div>
+         <div id="recuperacion-detalle" class="detalle-container">
+            <p>Detalles de la recuperación de prospectos</p>
+              <button onclick="regresar()">Regresar</button>
+        </div>
+          <div id="scripts-venta-detalle" class="detalle-container">
+            <p>Detalles de los Scripts de venta complementarios</p>
+              <button onclick="regresar()">Regresar</button>
+        </div>
+         <div id="informacion-adicional-detalle" class="detalle-container">
+            <p>Detalles sobre los precios, campañas, recomendaciones, objeciones, etc</p>
+              <button onclick="regresar()">Regresar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

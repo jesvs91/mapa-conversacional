@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Conceptual Crediclub Activa</title>
-    <style>
+     <style>
          body {
             font-family: sans-serif;
             background-color: #f4f4f4;
@@ -12,20 +12,27 @@
              overflow-x: scroll;
             padding: 20px;
              display: flex;
+              justify-content: center;
         }
         #mapa-container {
              display: flex;
              flex-direction: row;
-            align-items: flex-start;
-             width: 100%;
+             align-items: flex-start;
+            width: auto;
+            position:relative;
         }
           #mapa-index {
-            background-color: #e0e0e0;
+           background-color: #e0e0e0;
             border-right: 1px solid #ddd;
             padding: 20px;
             margin-right: 20px;
             width: 200px;
               text-align: left;
+                position: sticky;
+             top: 0;
+             left: 0;
+               height: 100vh;
+               overflow-y: auto;
         }
         #mapa-index a {
             display: block;
@@ -33,35 +40,40 @@
             margin: 5px 0;
             text-decoration: none;
             border-radius: 5px;
-              color: #3498db;
+             color: #3498db;
              cursor: pointer;
         }
          #mapa-index a:hover{
             background-color: #ddd;
         }
         #mapa-index a.active {
-            background-color: #4CAF50;
+            background-color: #e695d8;
             color: white;
         }
 
-         #mapa-flujo {
+        #mapa-flujo {
             display: flex;
             flex-direction: row; /* Presentación horizontal */
             align-items: flex-start; /* Alineación superior */
-
+             flex: 1;
+             padding-left: 20px;
         }
          .nodo-principal {
             background-color: #fff;
-            border: 1px solid #ddd;
+             border: 1px solid #ddd;
             padding: 20px;
             margin: 10px;
-            border-radius: 8px;
+             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             min-width:250px;
             text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
           .nodo-principal.active{
-           background-color: #e0e0e0;
+           background-color: #e695d8;
+             color:white;
         }
         .nodo-principal h2 {
             margin-top: 0;
@@ -112,13 +124,49 @@
                margin-top: 10px;
           }
         .flecha {
-           position: relative;
+            position: absolute;
             width: 0;
             height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 20px solid #3498db;
-            margin: 100px 20px 0 20px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 20px solid #464849;
+           margin: 90px 10px 0 -10px;
+        }
+           .nodo-principal:nth-child(2) .flecha{
+             margin-left: -20px;
+        }
+         .nodo-principal:nth-child(3) .flecha{
+             margin-left: -20px;
+        }
+           .nodo-principal:nth-child(4) .flecha{
+             margin-left: -20px;
+        }
+          .nodo-principal:nth-child(5) .flecha{
+             margin-left: -20px;
+        }
+        .nodo-principal:nth-child(6) .flecha{
+             margin-left: -20px;
+        }
+        .nodo-principal:nth-child(7) .flecha{
+             margin-left: -20px;
+        }
+        .nodo-principal:nth-child(8) .flecha{
+             margin-left: -20px;
+        }
+         .nodo-principal:nth-child(9) .flecha{
+             margin-left: -20px;
+        }
+         .nodo-principal:nth-child(10) .flecha{
+             margin-left: -20px;
+        }
+          .nodo-principal:nth-child(11) .flecha{
+             margin-left: -20px;
+        }
+          .nodo-principal:nth-child(12) .flecha{
+             margin-left: -20px;
+        }
+          .nodo-principal:nth-child(13) .flecha{
+             margin-left: -20px;
         }
 
     </style>
@@ -126,7 +174,7 @@
 <body>
     <div id="mapa-container">
         <div id="mapa-index">
-           <a href="#inicio" class="active">Presentación Inicial</a>
+            <a href="#inicio" class="active">Presentación Inicial</a>
              <a href="#continua1">Motivo de Llamada</a>
              <a href="#continua2">Validación de Cobertura</a>
               <a href="#oferta_inicial">Oferta Inicial de Producto</a>
@@ -143,7 +191,7 @@
               <a href="#cierre_llamada">Cierre de Llamada</a>
 
          </div>
-         <div id="mapa-flujo">
+          <div id="mapa-flujo">
          <div class="nodo-principal" data-target="inicio-detalle" id="inicio">
              <h2>Presentación Inicial</h2>
              <div class="opciones-container">

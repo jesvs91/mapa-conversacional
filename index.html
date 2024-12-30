@@ -3,202 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Conversacional Crediclub Activa</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <title>Mapa Conversacional Crediclub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mapa-container">
-        <div id="mapa-index">
-            <!-- 1. SCRIPT DE VENTA INICIAL -->
-            <a href="#inicio" class="active">1. SCRIPT DE VENTA INICIAL</a>
-                <a href="#inicio-detalle">1.1 PRESENTACIÓN Y CONFIRMACIÓN DE REGISTRO</a>
-                <a href="#continua1">1.2 MOTIVO DE LLAMADA Y CONFIRMACIÓN DE INTERÉS</a>
-                <a href="#continua2">1.3 VALIDACIÓN DE COBERTURA</a>
-                <a href="#oferta_inicial">1.4 OFERTA INICIAL DE PRODUCTO</a>
-                <a href="#sondeo_conocimiento">1.5 SONDEO Y CONOCIMIENTO DEL GRUPO</a>
-                    <a href="#sondeo_experiencia">1.5.1 Sondeo de experiencia y conocimiento de grupo</a>
-                <a href="#oferta_personalizada">1.6 OFERTA PERSONALIZADA</a>
-                <a href="#requisitos">1.7 REQUISITOS</a>
-                <a href="#conformacion_grupal">1.8 CONFORMACIÓN GRUPAL</a>
-                    <a href="#validar_integrantes">1.8.1 Validar integrantes mínimos requerido</a>
-                <a href="#datos_iniciales">1.9 DATOS INICIALES PARA TRÁMITE</a>
-                    <a href="#sondeo_tramite">1.9.1 Sondeo de trámite existente</a>
-                    <a href="#ma_integral">1.9.2 Introducción a MA integral</a>
-                    <a href="#solicitud_datos">1.9.3 Solicitud de datos iniciales</a>
-                <a href="#programacion_visita">1.10 PROGRAMACIÓN DE UNA VISITA</a>
-                <a href="#recapitulacion">1.11 RECAPITULACIÓN DE DATOS RECOPILADOS</a>
-                <a href="#cierre_llamada">1.12 CIERRE DE LLAMADA</a>
-        </div>
-        <div id="mapa-flujo-wrapper">
-            <div id="mapa-flujo">
-                <!-- 1. SCRIPT DE VENTA INICIAL -->
-                <div class="nodo-principal active" data-target="inicio-detalle" id="inicio">
-                    <h2>1. SCRIPT DE VENTA INICIAL</h2>
-                    <div class="opciones-container">
-                        <a href="#continua1" class="opcion">SÍ, CONTINUAR</a>
-                        <a href="#no_conoce" class="opcion">NO, preguntar si conoce a la persona</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="continua1-detalle" id="continua1">
-                    <h2>1.2 MOTIVO DE LLAMADA Y CONFIRMACIÓN DE INTERÉS</h2>
-                    <div class="opciones-container">
-                        <a href="#continua2" class="opcion">Sí, continuar</a>
-                        <a href="#no_disponible" class="opcion">Sí, pero no le puedo atender ahora</a>
-                        <a href="#no_interesa" class="opcion">Sí, pero ya no me interesa</a>
-                        <a href="#interes_personal" class="opcion">Sí, pero estoy interesada en un crédito Personal</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="continua2-detalle" id="continua2">
-                    <h2>1.3 VALIDACIÓN DE COBERTURA</h2>
-                    <div class="opciones-container">
-                        <a href="#oferta_inicial" class="opcion">Sí, tiene Cobertura y está muy alejado de la limítrofe</a>
-                        <a href="#fuera_limite" class="opcion">Sí, tiene Cobertura y está cerca de la limítrofe</a>
-                        <a href="#fuera_zona" class="opcion">Fuera de Zona</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="oferta_inicial-detalle" id="oferta_inicial">
-                    <h2>1.4 OFERTA INICIAL DE PRODUCTO</h2>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="sondeo_conocimiento-detalle" id="sondeo_conocimiento">
-                    <h2>1.5 SONDEO Y CONOCIMIENTO DEL GRUPO</h2>
-                    <div class="opciones-container">
-                        <a href="#oferta_personalizada" class="opcion">Sí, tiene experiencia</a>
-                        <a href="#oferta_personalizada" class="opcion">No, no tiene experiencia</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="oferta_personalizada-detalle" id="oferta_personalizada">
-                    <h2>1.6 OFERTA PERSONALIZADA</h2>
-                    <div class="opciones-container">
-                        <a href="#requisitos" class="opcion">Continuar</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="requisitos-detalle" id="requisitos">
-                    <h2>1.7 REQUISITOS</h2>
-                    <div class="opciones-container">
-                        <a href="#conformacion_grupal" class="opcion">Continuar</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="conformacion_grupal-detalle" id="conformacion_grupal">
-                    <h2>1.8 CONFORMACIÓN GRUPAL</h2>
-                    <div class="opciones-container">
-                        <a href="#datos_iniciales" class="opcion">Sí, es correcto, Continuar</a>
-                        <a href="#datos_iniciales" class="opcion">No, cambia el dato en contra</a>
-                        <a href="#datos_iniciales" class="opcion">No, cambia el dato a favor del mínimo requerido</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="datos_iniciales-detalle" id="datos_iniciales">
-                    <h2>1.9 DATOS INICIALES PARA TRÁMITE</h2>
-                    <div class="opciones-container">
-                        <a href="#preanalisis" class="opcion">SÍ</a>
-                        <a href="#no_primera_vez" class="opcion">NO</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="no_primera_vez-detalle" id="no_primera_vez">
-                    <h2>1.9.2 Introducción a MA integral</h2>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="preanalisis-detalle" id="preanalisis">
-                    <h2>1.9.3 Solicitud de datos iniciales</h2>
-                    <div class="opciones-container">
-                        <a href="#datos_finales" class="opcion">Continuar</a>
-                    </div>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="datos_finales-detalle" id="datos_finales">
-                    <h2>1.10 PROGRAMACIÓN DE UNA VISITA</h2>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="programacion_visita-detalle" id="programacion_visita">
-                    <h2>1.11 RECAPITULACIÓN DE DATOS RECOPILADOS</h2>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="recapitulacion-detalle" id="recapitulacion">
-                    <h2>1.12 CIERRE DE LLAMADA</h2>
-                </div>
-                <div class="flecha"></div>
-                <div class="nodo-principal" data-target="cierre_llamada-detalle" id="cierre_llamada">
-                    <h2>1.12 CIERRE DE LLAMADA</h2>
-                </div>
+    <div class="container">
+        <div id="inicio" class="section">
             </div>
-            <!-- Detalles de los nodos -->
-            <div id="inicio-detalle" class="detalle-container">
-                <p>1.1 PRESENTACIÓN Y CONFIRMACIÓN DE REGISTRO.</p>
-                <p>¡Buen día!, mi nombre es [EJECUTIVO], Ejecutivo de Crediclub Activa ¿tengo el gusto con [PROSPECTO]?</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="continua1-detalle" class="detalle-container">
-                <p>Mi llamada es referente a la información que solicitó de nuestros Créditos Grupales, ¿es correcto?</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="continua2-detalle" class="detalle-container">
-                <p>...de acuerdo, con el fin de ubicar su zona y revisar la cobertura del servicio le pido que me confirme su Código Postal [XXXXX] y colonia.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="oferta_inicial-detalle" class="detalle-container">
-                <p>Estimado [PROSPECTO] Crediclub Activa es un crédito grupal solidario que le permite emprender o expandir su negocio con un monto inicial desde $3,000 hasta $6,000 o, de contar con experiencia previa, por hasta el monto que haya manejado comprobable, pudiendo llegar hasta $100,000 por persona.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="sondeo_conocimiento-detalle" class="detalle-container">
-                <p>1.5.1 Sondeo de experiencia y conocimiento de grupo</p>
-                <p>Indíqueme, por favor: ¿Tiene o ha tenido anteriormente algún crédito grupal?</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="oferta_personalizada-detalle" class="detalle-container">
-                <p>Apreciable [PROSPECTO], basándonos en el monto estimado a solicitar, usted y su grupo accederían a un pago semanal de [PAGO X CADA MIL] por cada mil pesos de crédito. En su caso si usted solicita los [MONTO INICIAL] pagaría [PAGO SEMANAL] semanalmente, durante 16 semanas.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="requisitos-detalle" class="detalle-container">
-                <p>Para adquirir un crédito con nosotros, sólo requiere presentar: INE o Pasaporte vigente y en original. Comprobante de domicilio, no mayor a 3 meses de ser expedido y sin adeudos. Si desea solicitar un monto mayor a $6,000 pesos; Comprobante de su experiencia con [FINANCIERA], puede ser su libreta o control de pagos, o bien, su contrato de crédito grupal. Hasta el momento, ¿tiene usted alguna duda?</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="conformacion_grupal-detalle" class="detalle-container">
-                <p>1.8.1 Validar integrantes mínimos requerido</p>
-                <p>Para abrir su grupo, éste debe estar conformado por un mínimo de 7 integrantes y que no sobrepasen una hora caminando desde el punto de reunión a sus hogares.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="datos_iniciales-detalle" class="detalle-container">
-                <p>1.9.1 Sondeo de trámite existente</p>
-                <p>Por favor indíqueme, ¿es la primera vez que su grupo llevaría un trámite con nosotros?</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="no_primera_vez-detalle" class="detalle-container">
-                <p>En caso de que el grupo ya ha sido previamente asignado al equipo comercial en campo, deberás revisar si esto fue mayor a 21 días naturales (3 semanas), y cuándo fue su última actualización por parte de su Asesor Financiero en Dynamics en la pestaña "Seguimiento a comercial”, así como sondear al prospecto si fue contactado 0 visitado por su Asesor Financiero, y cuándo fue la última vez que tuvo una actualización de este.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="preanalisis-detalle" class="detalle-container">
-                <p>Estimado [PROSPECTO], el siguiente paso es realizar una preevaluación de crédito, la cual le permitirá a usted y su grupo conocer previamente si pueden ser candidatos al crédito y así después recibir a un asesor financiero para que le brinde información del trámite, y continuar con el proceso de contratación si así usted lo desea. Recibiendo al Asesor Financiero, éste terminará de analizar su grupo y le indicará si queda autorizado y bajo qué montos de crédito.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="datos_finales-detalle" class="detalle-container">
-                <p>Para el preanálisis de su grupo, requerimos algunos datos de usted y otras dos integrantes del grupo, las cuales preliminarmente seleccionaremos como comité o líderes del resto del grupo, sin embargo, puede cambiarlos si ustedes lo desean una vez que reciban la visita de un Asesor Financiero.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="programacion_visita-detalle" class="detalle-container">
-                <p>Le informo que preliminarmente le programaremos una visita por parte de uno de nuestros Asesores Financieros, para que resuelva cualquier duda y dé continuidad a su trámite si llega a ser preautorizado con nosotros.</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="recapitulacion-detalle" class="detalle-container">
-                <p>Excelente [PROSPECTO], por último, le mencionaré una breve recapitulación para confirmar que tenemos todo correcto, para cada una es necesario me indique si es correcto por favor:</p>
-                <p>• El crédito es para usted y con fines productivos o de emprendimiento, ¿es correcto? (SÍ/NO)</p>
-                <p>• Su grupo cuenta con integrantes, ¿es correcto? (SÍ/NO)</p>
-                <p>• La cita para recibir al asesor financiero con su grupo completo se programa para el día: ________, a la hora: _____ y en el domicilio:_______________, ¿es correcto? (SÍ/NO).</p>
-                <button onclick="regresar()">Regresar</button>
-            </div>
-            <div id="cierre_llamada-detalle" class="detalle-container">
-                <p>En un momento más le añadiré a un grupo de WhatsApp, donde le daré continuidad a la preaprobación de su grupo, de igual manera le recomiendo que guarde mi número de WhatsApp (ADMIN DE GRUPO) para que me identifique en los seguimientos.</p>
-                <p>Sin más por el momento, le agradezco haber atendido mi llamada, cualquier duda puede comunicarse con nosotros al teléfono 81-8000-9800 opción 2, con un servicio de lunes a viernes de 8am a 8pm, y sábados de 9am a 6pm, le atendió [EJECUTIVO] de Crediclub Activa, hasta pronto.</p>
-                <button onclick="regresar()">Regresar</button>
+
+        <div id="presentacion" class="section">
+            <h2>1.1 PRESENTACIÓN Y CONFIRMACIÓN DE REGISTRO</h2>
+            <p>¡Buen día!, mi nombre es Jesús salazar, Ejecutivo de Crediclub Activa ¿tengo el gusto con [PROSPECTO]?</p>
+            <div class="button-group">
+                <button onclick="navigateTo('motivo-llamada')">a) SÍ, CONTINUAR</button>
+                <button onclick="navigateTo('presentacion-no')">NO, preguntar si conoce a la persona...</button>
             </div>
         </div>
+
+        <div id="presentacion-no" class="section hidden">
+          <h2>1.1 PRESENTACIÓN Y CONFIRMACIÓN DE REGISTRO</h2>
+          <p>¿Conoce a la persona que dió estos datos? </p>
+           <div class="button-group">
+            <button onclick="navigateTo('motivo-llamada')">i) SI, SOY OTRO INTEGRANTE DEL GRUPO; CONTINUAR.</button>
+              <button onclick="navigateTo('cierre-llamada')">ii) NO LE CONOZCO;</button>
+               <button onclick="navigateTo('cierre-llamada')">iii) NO, SOY SU (CERCANÍA);</button>
+           </div>
+      </div>
+
+
+        <div id="motivo-llamada" class="section hidden">
+            <h2>1.2 MOTIVO DE LLAMADA Y CONFIRMACIÓN DE INTERÉS</h2>
+            <p>Mi llamada es referente a la información que solicitó de nuestros Créditos Grupales, ¿es correcta?</p>
+            <div class="button-group">
+                <button onclick="navigateTo('validacion-cobertura')">a) SÍ, CONTINUAR.</button>
+                <button onclick="navigateTo('cierre-llamada')">b) SÍ, PERO NO LE PUEDO ATENDER AHORA...</button>
+                <button onclick="navigateTo('cierre-llamada')">c) SÍ, PERO YA NO ME INTERESA...</button>
+                 <button onclick="navigateTo('cierre-llamada')">d) Sí, PERO ESTOY INTERESADA EN UN CRÉDITO PERSONAL/INDIVIDUAL...</button>
+            </div>
+        </div>
+
+        <div id="validacion-cobertura" class="section hidden">
+            <h2>1.3 VALIDACIÓN DE COBERTURA</h2>
+            <p>…de acuerdo, con el fin de ubicar su zona y revisar la cobertura del servicio le pido que me confirme su Código Postal [XXXXXX] y colonia.</p>
+            <div class="button-group">
+                <button onclick="navigateTo('oferta-inicial')">a) SI TIENE COBERTURA Y ESTÁ MUY ALEJADO DE LA LIMÍTROFE, CONTINUAR.</button>
+                <button onclick="navigateTo('validacion-cobertura-b')">b) SI TIENE COBERTURA Y ESTÁ CERCA DE LA LIMÍTROFE...</button>
+                  <button onclick="navigateTo('cierre-llamada')">c) FUERA DE ZONA...</button>
+                     <button onclick="navigateTo('cierre-llamada')">d) FUERA DE COBERTURA / ZONA DE NO COLOCACIÓN:</button>
+            </div>
+        </div>
+           <div id="validacion-cobertura-b" class="section hidden">
+             <h2>1.3 VALIDACIÓN DE COBERTURA</h2>
+            <p>Preguntar dirección especifica</p>
+               <div class="button-group">
+                <button onclick="navigateTo('oferta-inicial')">CONTINUAR CON COBERTURA</button>
+                 <button onclick="navigateTo('cierre-llamada')">FUERA DE COBERTURA</button>
+               </div>
+        </div>
+
+        <div id="oferta-inicial" class="section hidden">
+            <h2>1.4 OFERTA INICIAL DE PRODUCTO</h2>
+            <p>Estimado [PROSPECTO] Crediclub Activa es un crédito grupal solidario que le permite emprender o expandir su negocio... ¿Qué le parece?</p>
+            <div class="button-group">
+                <button onclick="navigateTo('sondeo-grupo')">a) bien; CONTINUAR.</button>
+                <button onclick="navigateTo('oferta-inicial-b')">b) PRESENTA DUDAS;...</button>
+            </div>
+        </div>
+         <div id="oferta-inicial-b" class="section hidden">
+            <h2>1.4 OFERTA INICIAL DE PRODUCTO</h2>
+            <p>Resolver dudas</p>
+               <div class="button-group">
+                <button onclick="navigateTo('sondeo-grupo')">CONTINUAR</button>
+                 <button onclick="navigateTo('cierre-llamada')">NO INTERESADO</button>
+            </div>
+        </div>
+
+        <div id="sondeo-grupo" class="section hidden">
+            <h2>1.5 SONDEO Y CONOCIMIENTO DEL GRUPO</h2>
+            <p>Indíqueme, por favor: • ¿Tiene o ha tenido anteriormente algún crédito grupal? ...</p>
+             <div class="button-group">
+                <button onclick="navigateTo('sondeo-experiencia')">CONTINUAR.</button>
+
+            </div>
+        </div>
+       <div id="sondeo-experiencia" class="section hidden">
+             <h2>1.5.1 Sondeo de experiencia y conocimiento de grupo.</h2>
+             <p>Además de ese, ¿tiene algún otro crédito grupal activo con la misma u otra financiera?, ¿cuántos?, ¿cerrará alguno de ellos? ...</p>
+            <div class="button-group">
+                <button onclick="navigateTo('sondeo-experiencia-a')">a) SI AÚN SIGUE VIGENTE: ...</button>
+                   <button onclick="navigateTo('oferta-personalizada')">CONTINUAR</button>
+            </div>
+        </div>
+         <div id="sondeo-experiencia-a" class="section hidden">
+              <h2>1.5.1 Sondeo de experiencia y conocimiento de grupo.</h2>
+             <p>¿cuántos?, ¿cerrará alguno de ellos? ...</p>
+             <div class="button-group">
+                <button onclick="navigateTo('cierre-llamada')"> a) 3 o MÁS MICROCRÉDITOS GRUPALES ABIERTOS:... </button>
+                <button onclick="navigateTo('oferta-personalizada')">b) Si está por cerrar uno de sus créditos grupales dentro de las próximas 2 semanas... </button>
+           </div>
+        </div>
+
+       <div id="oferta-personalizada" class="section hidden">
+           <h2>1.6 OFERTA PERSONALIZADA</h2>
+           <p>Apreciable [PROSPECTO], basándonos en el monto estimado a solicitar...</p>
+           <div class="button-group">
+                <button onclick="navigateTo('requisitos')">CONTINUAR</button>
+
+           </div>
+      </div>
+
+        <div id="requisitos" class="section hidden">
+            <h2>1.7 REQUISITOS</h2>
+            <p>Para adquirir un crédito con nosotros, sólo requiere presentar: • INE o Pasaporte vigente...  Hasta el momento, ¿tiene usted alguna duda?</p>
+            <div class="button-group">
+                <button onclick="navigateTo('conformacion-grupal')">a) SIN COMPROBANTE DE DOMICILIO;...</button>
+                <button onclick="navigateTo('conformacion-grupal')">b) SIN COMPROBANTE DE EXPERIENCIA;...</button>
+                <button onclick="navigateTo('cierre-llamada')">c) PECADO INE/INE VENCIDA;...</button>
+            </div>
+        </div>
+
+
+        <div id="conformacion-grupal" class="section hidden">
+            <h2>1.8 CONFORMACIÓN GRUPAL</h2>
+            <p>Para abrir su grupo, éste debe estar conformado por un mínimo de 7 integrantes... Usted me indicó anteriormente que cuenta con [INTEGRANTES] integrantes, ¿es correcto?</p>
+            <div class="button-group">
+                <button onclick="navigateTo('validacion-integrantes')">a. SÍ, ES CORRECTO; CONTINUAR.</button>
+                <button onclick="navigateTo('validacion-integrantes')">b. NO, (cambia el dato en contra); CONTINUAR.</button>
+                  <button onclick="navigateTo('validacion-integrantes')">do. NO, (cambia el dato a favor del mínimo requerido); ...</button>
+            </div>
+        </div>
+
+
+     <div id="validacion-integrantes" class="section hidden">
+            <h2>1.8.1 Validar integrantes mínimos requeridos.</h2>
+            <p>Valida que se cuente con el minimo de integrantes</p>
+            <div class="button-group">
+                <button onclick="navigateTo('datos-iniciales')">a) CUENTA CON EL MÍNIMO DE INTEGRANTES REQUERIDO, CONTINUAR.</button>
+                <button onclick="navigateTo('cierre-llamada')">b) FALTAN INTEGRANTES PARA EL MÍNIMO REQUERIDO,...</button>
+            </div>
+        </div>
+
+        <div id="datos-iniciales" class="section hidden">
+            <h2>1.9 DATOS INICIALES PARA TRÁMITE</h2>
+            <p>Por favor indíqueme, ¿es la primera vez que su grupo llevaría un trámite con nosotros?</p>
+              <div class="button-group">
+                <button onclick="navigateTo('cierre-llamada')">o SÍ;...</button>
+                 <button onclick="navigateTo('introduccion-ma')">NO; en caso contrario CONTINUAR.</button>
+            </div>
+        </div>
+         <div id="introduccion-ma" class="section hidden">
+            <h2>1.9.2 Introducción a MA integral</h2>
+             <p> Estimado [PROSPECTO], el siguiente paso es realizar una preevaluación de crédito...</p>
+                <div class="button-group">
+                <button onclick="navigateTo('datos-iniciales-solicitud')">CONTINUAR</button>
+            </div>
+        </div>
+
+        <div id="datos-iniciales-solicitud" class="section hidden">
+            <h2>1.9.3 Solicitud de datos iniciales.</h2>
+            <p>[PROSPECTO], los datos requeridos por cada integrante... Datos personales: Opción CURP: ... Datos domiciliarios: ¿Cuál es su domicilio?  De las dos integrantes adicionales, ¿cuenta con los mismos datos a la mano?</p>
+               <div class="button-group">
+                <button onclick="navigateTo('programacion-visita')">a) SÍ;...</button>
+                   <button onclick="navigateTo('programacion-visita')">b) NO; ...</button>
+            </div>
+        </div>
+
+        <div id="programacion-visita" class="section hidden">
+            <h2>1.10 PROGRAMACIÓN DE UNA VISITA</h2>
+            <p>Le informo que preliminarmente le programaremos una visita... ¿Está bien si le programamos la visita con su grupo? ¿Puede su grupo, recibir al Asesor Financiero ...?</p>
+                <div class="button-group">
+                   <button onclick="navigateTo('recapitulacion-datos')">o SÍ;...</button>
+                    <button onclick="navigateTo('recapitulacion-datos')">NO; ...</button>
+            </div>
+        </div>
+
+         <div id="recapitulacion-datos" class="section hidden">
+           <h2>1.11 RECAPITULACIÓN DE DATOS RECOPILADOS</h2>
+            <p>Excelente [PROSPECTO], por último, le mencionaré una breve recapitulación...</p>
+               <div class="button-group">
+                <button onclick="navigateTo('cierre-llamada')">CONTINUAR</button>
+            </div>
+        </div>
+
+        <div id="cierre-llamada" class="section hidden">
+            <h2>1.12 CIERRE DE LLAMADA</h2>
+            <p>En un momento más le agregaré a un grupo de WhatsApp... </p>
+             <div class="button-group">
+             FIN DE LA LLAMADA
+            </div>
+        </div>
+
     </div>
     <script src="script.js"></script>
 </body>
